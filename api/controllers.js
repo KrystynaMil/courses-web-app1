@@ -2,14 +2,13 @@
 
 const fs = require('fs');
 const path = require('path');
-const Joi = require('joi');
 const tv4 = require('tv4');
 
-const config = require('../config');
+
 const DATA_DIR = path.join(__dirname, '..', 'data', 'courses.json');
 
 const schema = require('../data/schema.json');
-const { isSchema } = require('joi');
+
 
 const controllers = {
   hello: (req, res) => {
