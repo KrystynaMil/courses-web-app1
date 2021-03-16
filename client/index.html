@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8" />
   <title>courses web-app</title>
 
-  <!-- BOOTSTRAP THEME -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./assets.css">
   <script src="https://kit.fontawesome.com/1f1918c2d9.js" crossorigin="anonymous"></script>
   <script type="module">
     import { init } from './app/init.js'
@@ -18,77 +14,30 @@
 </head>
 
 <body>
-  <div class="main-container mx-auto">
-
-    <!-- header -->
-    <div class="container mr-3 ml-3">
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link active" href="https://hackyourfuture.be/" target="_blank">
-            <img src="./assets/hyf.svg" alt="HYF" width="60">
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- jumbotron -->
-    <div class="jumbotron bg-cover jumbotron-resize d-flex align-items-center justify-content-center">
-      <div class="container text-white min-width">
-        <h1 class="disp-txt m-5 text-left">"An investment in knowledge always pays the best interest."</h1>
-        <div class="m-5 text-right quote-m">Benjamin Franklin</div>
-
-       
+    <header>
+      <div header-wrapper>
+      <a class="nav-link active" href="https://hackyourfuture.be/" target="_blank">
+      <img src="./hyf.svg" alt="HYF">
+    </a>
       </div>
-    </div>
-
-    <!-- items -->
-    <div class="mb-5 mt-5 align-content-center container-fluid">
-
-      <div class="row">
-
-        <div class="borderless d-none d-sm-none d-md-block col-12 col-sm-12 col-md-6 col-xl-6 my-auto mx-auto m-0 p-0">
-          <img src="./assets/bg-bibleStudyTable.png" class="card-img img align-self-center" alt="image">
-        </div>
-
-        <!-- right -->
-        <div class="col col-12 col-sm-12 col-md-6 col-xl-6 mx-auto">
-          <h2 class="text-center text-primary">Add new course</h2>
-          <div class="container mx-auto">
-            <form>
-
-              <div class="form-outline mb-1">
-                <input type="text" id="name" class="form-control" maxlength="30" placeholder="course name" />
-                <label class="form-label" for="name"></label>
-              </div>
-
-              <div class="form-outline mb-1">
-                <input type="text" id="place" class="form-control" maxlength="30" placeholder="course location" />
-                <label class="form-label" for="place"></label>
-              </div>
-
-              <div class="form-outline mb-1">
-                <input type="text" id="details" class="form-control" maxlength="60" placeholder="course details" />
-                <label class="form-label" for="details"></label>
-              </div>
-
-              <div class="text-center pb-4">
-                <button type="submit" id="newCourse" class="btn btn-primary btn-lg round btn-p">Save new course</button>
-              </div>
-            </form>
-
-            <!-- feedback -->
-            <h5 id="feedback" class="feedback text-center"></h5>
-          </div>
-        </div>
+    </header>
+    <main>
+      <div class="form-wrapper">
+        
+        
+        <form id='save-form'>
+          <input id='course-name' name='courseName' placeholder='Course name' />
+          <input id='course-place' name='coursePlace' placeholder='Course place' />
+          <textarea id='course-details' name='courseDetails' placeholder='Course details'></textarea>
+          <p class="error">Please fill the course name and details</p>
+          <p class="save">Your course has been saved</p>
+          <p class="modify">Your course content has been updated</p>
+          <button id='save-button'>Save course</button>
+          
+        </form>
       </div>
-      <!-- list of items -->
-      <div>
-        <div class="row mt-4 ml-0 mr-0" id="items">
-        <!-- cards go here   -->
-
-        </div>
-      </div>
-      <div class="details-wrapper">
+      
+    <div class="details-wrapper">
       <div class="details">
         <details >
           <summary class='btn'>Courses list</summary>
@@ -97,24 +46,18 @@
       </div>
     </div>
     
-    </div>
- 
-    <!-- footer -->
-    <footer class="text-center bg-primary d-flex align-items-center justify-content-between p-4">
-      <div class="empty"></div>
-      <div class="text-center">
-        © 2021 Copyright
-      </div>
-      <div class="justify-content-end d-flex flex-row justify-content-end">
-        <div id="group" class="align-self-center">Group 1</div>
-        <a class="nav-link active" href="https://github.com/LiubovPlugar/courses-web-app" target="_blank">
-          <img src="./assets/github.png" alt="github" width="30">
-        </a>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+          
+<div class="social">
+          <a class="nav-link active" href="https://github.com/KrystynaMil/courses-web-app1" target="_blank">
+              <button class="unit"><i class="fab fa-github fa-2x"></i></button>
+              <button class="unit"><i class="fab fa-twitter fa-2x"></i></button>
+              <button class="unit"><i class="fab fa-facebook fa-2x"></i></button>
+          </div>
       </div>
     </footer>
-
-  </div>
-
 </body>
 
 </html>

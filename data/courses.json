@@ -1,17 +1,17 @@
 {
-  "nextId": 7,
+  "nextId": 22,
   "courses": [
     {
       "id": 1,
       "name": "HTML5",
-      "place": "Online Course",
-      "details": "Welcome to HTML5"
+      "place": "Online Course and HYF",
+      "details": "Welcome to HTML5  "
     },
     {
       "id": 2,
       "name": "CSS",
       "place": "Online Course",
-      "details": "CSS-Tricks"
+      "details": "CSS-Tricks and\n"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
     },
     {
       "id": 6,
-      "name": "Webpack",
+      "name": "Webpack ",
       "place": "Online Course",
       "details": "Module bundler"
     }
