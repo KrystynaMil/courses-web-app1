@@ -30,18 +30,6 @@ const listOfCourses = (arr) => {
       nameHeader.innerHTML = course.name;
       container.appendChild(nameHeader);
 
-      if (course.details === '' || course.details === undefined || course.details === null) {
-        const detailsHeader = document.createElement('h3');
-        detailsHeader.classList.add('details-header');
-        detailsHeader.innerHTML = 'Details: ';
-        const details = document.createElement('p');
-        details.classList.add('detailsInfo', 'display');
-        details.setAttribute('data-id', course.id);
-        details.innerHTML = 'Details for the current course are not provided';
-        nameDiv.appendChild(detailsHeader);
-        nameDiv.appendChild(details);
-
-      } else {
         const detailsHeader = document.createElement('h3');
         detailsHeader.classList.add('details-header');
         detailsHeader.innerHTML = 'Details: ';
@@ -49,9 +37,10 @@ const listOfCourses = (arr) => {
         details.classList.add('detailsInfo', 'display');
         details.setAttribute('data-id', course.id);
         details.innerHTML = course.details;
+        details.style.color = 'red';
         nameDiv.appendChild(detailsHeader);
         nameDiv.appendChild(details);
-      }
+    
       
       const placeDiv = document.createElement('div');
       nameDiv.appendChild(placeDiv);
@@ -154,8 +143,6 @@ document.getElementById('save-button')
 
   //
   
-
-/////
   const saveCourse = (course) => {
     fetch('api/courses/', {
       method: 'POST',
